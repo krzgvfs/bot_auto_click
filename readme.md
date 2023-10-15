@@ -32,11 +32,13 @@ python3 -m pip install -r requeriments.txt
 
 ## Configuração
 
-Configure sua imagem alvo na pasta do projeto, os formatos aceitos são ```.png``` e ```.jpg``` e realizei a substituição do caminho para a mesma na variavel a seguir no arquivo ```main.py```.
+Configure sua imagem alvo na pasta do projeto, os formatos aceitos são ```.png``` e ```.jpg``` e realize a substituição do caminho para a mesma na variavel a seguir no arquivo ```main.py```.
+Obs: Fundos escuros, claros e transparentes causam perda de pressição na detectação.
 
 ```python
 coordenadas = ScreenManager.get_all_matches_by_image("caminho-para-a-sua-imagem.png")
 ```
+Ajuste o parametro ```confidence=0.5``` para alterar o nível de precisão.
 
 ## Licença
 
