@@ -1,11 +1,17 @@
 import logging
 import pyautogui
-import cv2
+import cv2 
 
 class ScreenManager:
-    @staticmethod # Não precisa instanciar para utilizar os metodos.
+    @staticmethod
     def get_all_matches_by_image(image_to_search: str):
         try:
-            return pyautogui.locateAllOnScreen(image=image_to_search, greyscale=True, confidence=0.9)
+            coordinates = list(pyautogui.locateAllOnScreen(image=image_to_search, grayscale=True, confidence=0.5))
+            if coordinates:
+                return coordinates
+            else:
+                logging.info("Imagem não encontrada")
+                return []
         except Exception as ex:
-            logging.info(f"Imagem não encontrada: Erro:{ex}")
+            logging.error(f"Erro ao buscar imagem: {ex}")
+            return []

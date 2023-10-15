@@ -1,9 +1,12 @@
 from screen_manager import ScreenManager
 
-
 def run():
-    coordinates = ScreenManager.get_all_matches_by_image(image_to_search="./teste.png")
-    for coordinate in coordinates:
-        print(coordinate)
+    coordenadas = ScreenManager.get_all_matches_by_image("logo.jpg")
+    if coordenadas:
+        for coordenada in coordenadas:
+            print(coordenada)
+    else:
+        pass
 
-run()
+while True: 
+    run()
