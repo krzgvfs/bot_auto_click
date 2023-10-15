@@ -9,7 +9,7 @@ Exemplo de algoritimo para automatização de tarefas baseado em reconhecimento 
 
 **Windows**
 
-Abra o PowerShell, navegue até a pasta do projeto e digite os comandos a segui.
+Abra o PowerShell, navegue até a pasta do projeto e digite os comandos a seguir.
 
 ```powershell
 py -m venv app_env                      \
@@ -21,7 +21,7 @@ py -m pip install -r requeriments.txt
 
 **Linux**
 
-Abra um terminal, navegue até na pasta do projeto e digite os comandos a segui.
+Abra um terminal, navegue até na pasta do projeto e digite os comandos a seguir.
 
 ```bash
 python3 -m venv app_env                      \
